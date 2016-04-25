@@ -3,6 +3,9 @@ console.log('main.js')
 	{
 		document.getElementById('screen2').value +=num;
 } 
+var term1 = null;
+var term2 = null;
+var operation = null;
 function operation(op){
 	if (op == '+') {
 		console.log('plus');
