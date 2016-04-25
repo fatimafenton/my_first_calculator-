@@ -1,0 +1,50 @@
+h1{
+	text-align: center;
+	margin:40px 30px 10px 30px;
+}
+#calculator {
+	width: 250px;
+	height: 400px;
+	border: 2px solid black;
+	border-radius: 20px;
+	text-align: center;
+	background: blue;
+	margin: 100px auto;
+	box-shadow: 0px 0px 50px black;
+}
+#screen1{
+	margin-top: 30px;
+	width: 220px;
+	height: 30px;
+	border: 2px;
+	box-shadow: 0px 0px 30px black;
+	font: 20px bold;
+	color: black; 
+}
+#screen2{
+	margin-bottom: 35px;
+	width: 220px;
+	height: 30px;
+	text-align: right;
+	border: 2px;
+	font: 20px bold;
+	color: black; 
+}
+
+#keys{
+	width: 41px;
+	height: 35px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 20px black;
+	cursor: auto;
+	border-radius: 10px;
+}
+#equal{
+	width: 41px;
+	height: 35px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 20px black;
+	cursor: auto;
+}
