@@ -44,15 +44,17 @@ function doMaths(x, op, y){
 	return answer;
 }	
 	function equal(){
-		term2 = document.getElementById('screen1').value *1;
+		term2 = document.getElementById('screen2').value *1;
 		// do the maths
 		term2 = doMaths(term1, operation, term2);
 		term1 = 0;
 		operation = null;
 		document.getElementById('screen2').value = term2;
 	}
-
-
+function reSet(arg) {
+	 document.getElementById('screen2').value = ' '; 
+	 term2 =0;
+}
 
 
 	
