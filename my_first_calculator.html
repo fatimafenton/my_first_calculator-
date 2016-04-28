@@ -10,29 +10,61 @@
 
 <body>
 			<h1>My Calculator!!!</h1>
-	<div id="calculator">
-			
-			<input type="textfield" id="screen1"/><br/>
-			<input type="textfield" id="screen2"/><br/>
-		
-			<input type="button" value="1" class="keys" id="keys1" onClick="addToScreen('1')">	
-			<input type="button" value="2" class="keys" id="keys2" onClick="addToScreen('2')"/>
-			<input type="button" value="3" class="keys" id="keys3" onClick="addToScreen('3')"/>
-			<input type="button" value="+" class="keys" id="keysPlus" onClick="doOperation('+')"/><br/>
-		
-			<input type="button" value="4" class="keys" id="keys4" onClick="addToScreen('4')"/>
-			<input type="button" value="5" class="keys" id="keys5" onClick="addToScreen('5')"/>
-			<input type="button" value="6" class="keys" id="keys6" onClick="addToScreen('6')"/>
-			<input type="button" value="-" class="keys" id="keysMinus" onClick="doOperation('-')"/><br/>
-			 
-			<input type="button" value="7" class="keys" id="keys7" onClick="addToScreen('7')"/>
-			<input type="button" value="8" class="keys" id="keys8" onClick="addToScreen('8')"/>
-			<input type="button" value="9" class="keys" id="keys9" onClick="addToScreen('9')"/>
-			<input type="button" value="*" class="keys" id="keysM" onClick="doOperation('*')"/><br/>
-			<input type="button" value="C" class="keys" id="keysC" onClick="reSet('c')"/>
-	 		<input type="button" value="0" class="keys" id="keys0" onClick="addToScreen('0')"/>
-			<input type="button" value="="  id="equal" onClick="equal()"/>
-			<input type="button" value="/" class="keys" id="keysD" onClick="doOperation('/')"/>
+	<div>
+
+		<table id="calculator" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2">
+					<input type="textfield" id="screen1"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="textfield" id="screen2"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="notScienceDiv">
+						<input type="button" value="C" class="keys" id="keysC" onClick="reSet('c')"/>
+				 		<input type="button" value="CE" class="keys" id="keysCE" onClick="reSet('ce')"/>
+				 		<input type="button" value="SCI" class="keys" id="keysSCI" onClick="SCI()"/>
+				 		
+				 		<br/>
+					
+						<input type="button" value="1" class="keys" id="keys1" onClick="addToScreen('1')">	
+						<input type="button" value="2" class="keys" id="keys2" onClick="addToScreen('2')"/>
+						<input type="button" value="3" class="keys" id="keys3" onClick="addToScreen('3')"/>
+						<input type="button" value="+" class="keys" id="keysPlus" onClick="doOperation('+')"/><br/>
+					
+						<input type="button" value="4" class="keys" id="keys4" onClick="addToScreen('4')"/>
+						<input type="button" value="5" class="keys" id="keys5" onClick="addToScreen('5')"/>
+						<input type="button" value="6" class="keys" id="keys6" onClick="addToScreen('6')"/>
+						<input type="button" value="-" class="keys" id="keysMinus" onClick="doOperation('-')"/><br/>
+						 
+						<input type="button" value="7" class="keys" id="keys7" onClick="addToScreen('7')"/>
+						<input type="button" value="8" class="keys" id="keys8" onClick="addToScreen('8')"/>
+						<input type="button" value="9" class="keys" id="keys9" onClick="addToScreen('9')"/>
+						<input type="button" value="*" class="keys" id="keysM" onClick="doOperation('*')"/><br/>
+
+						<input type="button" value="0" class="keys" id="keys0" onClick="addToScreen('0')"/>
+						<input type="button" value="="  id="equal" onClick="equal('')"/>
+						<input type="button" value="/" class="keys" id="keysD" onClick="doOperation('/')"/>
+					</div>
+				</td>
+				<td>
+					<div id="scienceDiv" style="display: none;"">
+			 			<input type="button" value="Mod" class="keys" id="keysMod" onClick="doOperation('%')"/>
+			 			<form action="">
+			 			
+						  <input type="radio" value="all">
+						  <input type="radio" value="0"> 
+						  <input type="radio" value="2"> 
+						</form>
+			 		</div>	
+				</td>
+			</tr>
+		</table>
 
 	</div>	
 	</body>
