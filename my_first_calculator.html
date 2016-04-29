@@ -13,16 +13,28 @@
 	<div>
 
 		<table id="calculator" cellpadding="0" cellspacing="0">
+
+		<tr>
+			<td colspan="2">
+				<select id="theme" onChange="setTheme('this.value')">
+					<option value="#ffff00">Yellow</option>
+					<option value="#00ff00">Green</option>
+				</select>
+			</td>	
+		</tr>
+
 			<tr>
 				<td colspan="2">
 					<input type="textfield" id="screen1"/>
 				</td>
 			</tr>
+
 			<tr>
 				<td colspan="2">
 					<input type="textfield" id="screen2"/>
 				</td>
 			</tr>
+
 			<tr>
 				<td>
 					<div id="notScienceDiv">
@@ -49,15 +61,16 @@
 
 						<input type="button" value="0" class="keys" id="keys0" onClick="addToScreen('0')"/>
 						<input type="button" value="="  id="equal" onClick="equal('')"/>
+						<input type="button" value="." class="keys" id="decimalD" onClick="addToScreen('.')"/>
 						<input type="button" value="/" class="keys" id="keysD" onClick="doOperation('/')"/>
 					</div>
 				</td>
 				<td>
 					<div id="scienceDiv" style="display: none;"">
 
-					 	  <input type="radio" value="all"><br>
-						  <input type="radio" value="0"><br> 
-						  <input type="radio" value="2"><br> 
+					 	  <input type="radio" name="decimal" value="-1" checked="true" onclick="decimal = -1;">all<br>
+						  <input type="radio" name="decimal" value="0" onclick="decimal = 0;">0<br> 
+						  <input type="radio" name="decimal" value="2" onclick="decimal = 2;">2<br> 
 			 			<input type="button" value="Mod" class="keys" id="keysMod" onClick="doOperation('%')"/>
 			 			
 			 		</div>	

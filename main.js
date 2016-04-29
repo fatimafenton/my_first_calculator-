@@ -2,6 +2,7 @@ console.log('main.js')
 var term1 = null; //Declare the var term1
 var term2 = null;//Declare the var term2
 var operation = null;//Declare var operation
+var decimal = -1;
 
 	function addToDisplay(addChar){
 		document.getElementById('screen1').value += addChar; //display value in screen1
@@ -44,6 +45,15 @@ function doMaths(x, op, y){
 	else if(op == '%'){
 		answer = term1 % term2;
 	}
+
+	if(decimal === 0) {
+		 answer= Math.round(answer);//rounding the answer to 0 decimal places
+	}
+	else if(decimal === 2) {
+		answer= Math.round(answer*100)/100;//rounding the answer to 2 decimal places
+	}
+	
+
 	return answer;//return the answer to whatever called the function
 
 }	
@@ -83,7 +93,9 @@ function SCI () {
 	else{
 		document.getElementById('scienceDiv').style.display = 'none';
 	}
-	
+function setTheme (color) {
+	console.log('changecolor');
+	}	
 }
 	 
 
